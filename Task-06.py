@@ -8,3 +8,22 @@
 # пробелом. Каждое слово состоит из латинских букв в нижнем регистре. Сделать вывод исходной
 # строки, но каждое слово должно начинаться с заглавной буквы. Необходимо использовать написанную
 # ранее функцию int_func()
+
+def word_cap(word):
+
+    return word.capitalize()
+
+
+def text_cap(text):
+
+    word_list = text.split(' ')
+
+    for i, el in enumerate(word_list):
+        word_list[i] = word_cap(el)
+
+    return ' '.join(word_list)
+
+
+# Текст латинскими буквами - обязательное условие?
+print(word_cap('спектр'))
+print(text_cap('каждый охотник желает знать, где сидит фазан'))
